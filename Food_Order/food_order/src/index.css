@@ -9,7 +9,7 @@ html{
   display: flex;
   width: 100%;
   height:  8rem;
-  border: 2px solid rgb(171, 167, 167);
+  background-color: rgba(241, 234, 224, 0.445);
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -45,8 +45,8 @@ html{
   
 }
 .res-card{
-  width: 22rem;
-  height: px;
+  width: 25rem;
+  height: 35rem;
   padding: 10px;
   margin: 2rem;
   border-radius: 2rem;
@@ -95,4 +95,47 @@ html{
   margin: 1rem;
   background-color: rgba(204, 195, 181, 0.74);
   border-radius: .5rem;
+}
+
+.top{
+  margin-top: 2rem;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search{
+  position: absolute;
+  /* border: 2px solid black; */
+  width: 28rem;
+  height: 3.8rem;
+  left: 3%;
+  border-radius: 1rem;
+}
+.search-box{
+  outline: none;
+  border: 1px solid #333;
+  height: 100%;
+  width: 80%;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.search-button{
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  border: 1px solid #333;
+  background-color: beige;
+  height: 100%;
+  border-radius: .6rem;
+  width: 20%;
+}
+.search-button:active{
+  background-color: rgb(242, 226, 199);
+}
+.filter{ 
+  position: absolute;
+  right: 5%;
 }

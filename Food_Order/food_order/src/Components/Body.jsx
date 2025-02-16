@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Body =()=>{   
     const [ListOfRes,SetListOfRes] = useState([])
-    
+    const [inputText,SetInputText]=useState("");
 
     let change= async()=>{
         let data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.87960&lng=78.07620&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
@@ -20,8 +20,19 @@ const Body =()=>{
 
     return(
     <div className="body">
+    <div className="top">
 
-    <button className=" h-10 border text-2xl mt-3 ml-10 rounded-2xl w-24 bg-fuchsia-100 cursor-pointer hover:bg-amber-100"
+    <div className="search">
+    <input type="text" placeholder="Search...." className="search-box"
+    value={inputText}
+    onChange={(e)=>SetInputText(e.target.value)}
+    ></input>
+    <button className="search-button"
+    onClick={(value)=>console.log(value)}
+    >Search</button>
+    </div>
+
+    <button className="filter h-14 border text-2xl mt-3 ml-10 rounded-2xl w-28 bg-amber-50 cursor-pointer hover:bg-amber-100"
     
          onClick={()=>{
             let changeVal=ListOfRes.filter(
@@ -32,7 +43,7 @@ const Body =()=>{
 
     }}
     >Filter</button>
-    
+    </div>
         <div className="res-container">
         
 
